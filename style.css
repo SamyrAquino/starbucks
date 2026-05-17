@@ -22,6 +22,10 @@
     --cor-secundaria-1:#f5c518;
 }
 
+a.btn{
+    text-decoration: none;
+}
+
 .btn{
     padding: 10px 20px;
     border: none ;
@@ -30,6 +34,18 @@
     font-size: 1rem;
     font-weight: 600;
     background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.btn-mobile{
+    font-size: 1.5rem;
+}
+.btn-default{
+    background-color: var(--cor-primaria-1);
+    color: var(--cor-neutra-0);
+    &:hover{
+        background-color: var(--cor-primaria-2) ;
+    }
 }
 header{
     background-color: var(--cor-neutra-1);
@@ -79,11 +95,26 @@ header{
                 }
             }
         }
-        .btn-default{
-            display: none;
-        }
     }
 }
-body{
-   
+
+@media (min-width: 769px)  {
+    header{
+        .navbar{
+            .btn-mobile{
+                display:none;
+            }
+            ul{
+                display: flex;
+                flex-direction: row;
+                position: static;
+                gap: 1rem;
+                width: auto;
+                padding: 0;
+            }
+            .btn-default{
+                display: block;
+            }
+        }
+    }
 }
