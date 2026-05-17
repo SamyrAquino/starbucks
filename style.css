@@ -103,6 +103,11 @@ a.btn{
         margin-top: 12px;
     }
 }
+
+#trending {
+    
+}
+
 header{
     background-color: var(--cor-neutra-1);
     padding: 12px 4%;
