@@ -22,6 +22,11 @@
     --cor-secundaria-1:#f5c518;
 }
 
+#container{
+    background-image: url(imagens/background-mobile.png);
+    background-size: contain;
+}
+
 a.btn{
     text-decoration: none;
 }
@@ -45,6 +50,54 @@ a.btn{
     color: var(--cor-neutra-0);
     &:hover{
         background-color: var(--cor-primaria-2) ;
+    }
+}
+.btn-outlined{
+    background-color: transparent;
+    color: var(--cor-primaria-1);
+    border: 2px solid var(--cor-primaria-1);
+
+    &:hover{
+        background-color: var(--cor-primaria-1);
+        color: var(--cor-neutra-0);
+    }
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    min-height: calc(100vh - 96px);
+    padding-top: clamp(0px, 5vw, 32px );
+
+    .home-image {
+        width: clamp(300px, 50%, 400px);
+    }
+
+    .home-title{
+        color: var(--cor-neutra-8);
+        text-align: center;
+        font-size: clamp(3rem, 5vw, 4.3rem);
+        text-transform: uppercase;
+        line-height: 1.2;
+        max-width: 700px;
+
+        span{
+            color: var(--cor-primaria-1);
+        }
+    }
+    .home-description{
+        color: var(--cor-neutra-9);
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        max-width: 600px ;
+    }
+    .home-actions{
+        display: flex;
+        gap: 12px;
+        margin-top: 12px;
     }
 }
 header{
@@ -77,6 +130,7 @@ header{
             &.show {
                 display: flex;
             }
+
 
             li{
                 text-align: center;
